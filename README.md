@@ -9,15 +9,15 @@
 
 執行腳本feedback.sh
 
-# nohup: 讓command在遠端執行，不因登出而中斷
-# view_dns.py 查看 ngrok 的連線網址
+nohup: 讓command在遠端執行，不因登出而中斷
+view_dns.py 查看 ngrok 的連線網址
 
 將顯示的nogrok網址填寫在 token 頁面上的 Webhook URL 欄位
 
 執行 jupyter
 
 # 群發功能
-# selenium + PhantomJS
+selenium + PhantomJS
 開啟手機的 line 驗證登入
 達到目標數值時，會自動群發訊息
 
