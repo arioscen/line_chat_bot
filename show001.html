@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css001.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function loadlink(){
+            jQuery.get("http://35.189.169.52:7379/get/LoremIpsumissimplydummytextoftheprintingandtypesettingindustry.LoremIpsumhasbeentheindustry'sstandarddummytexteversincethe1500s,whenanunknownprintertookagalleyoftypeandscrambledittomakeatypespecimenbook.Ithassurvivednotonlyfivecenturies,butalsotheleapintoelectronictypesetting,remainingessentiallyunchanged.Itwaspopularisedinthe1960swiththereleaseofLetrasetsheetscontainingLoremIpsumpassages,andmorerecentlywithdesktoppublishingsoftwarelikeAldusPageMakerincludingversionsofLoremIpsum.txt", function(data) {
+                if(data > 2000){
+                    $('#warning').text("爆量通知");
+                }
+                $('#number').text(data);
+            });
+        }
+        setInterval(function(){
+            loadlink()
+        }, 1000);
+    </script>
+    <script src="odometer.js"></script>
+</head>
+<body>
+    <div style="text-align:center;">
+        <div id="run" style="font-size:80px">即時銷量</div>
+        <div class="odometer" id="number">0000</div>
+        <div id="warning" style="color:#FF0000; font-size:80px"></div>
+    </div>
+</body>
+</html>

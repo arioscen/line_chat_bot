@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.2//EN" "http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function setURL(url){
+            document.getElementById('iframe').src = "https://tinyurl.com/y73edwh9";
+        }
+
+        var number = 0;
+        function setEvent(){
+            number += 1;
+            document.getElementById('bought').innerHTML = "已購買數量："+number;
+        }
+    </script>
+    <style>
+        input[type='button'] { font-size: 30px; }
+    </style>
+</head>
+<body align="center">
+<div id="bought" style="font-size:30px">已購買數量：0</div>
+<input type="button" onclick="setURL();setEvent()" value="立即購買" style="height:120px;width:50%">
+<br>
+<br>
+<iframe id="iframe" src="" frameborder="0" width="0" height="0"></iframe>
+</body>
+</html>
